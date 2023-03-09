@@ -1,7 +1,6 @@
 import pytest
 from selene import browser
 
-
 @pytest.fixture()
 def constants():
     browser.config.hold_browser_open = True
