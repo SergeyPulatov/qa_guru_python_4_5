@@ -1,10 +1,10 @@
 import os
-from selene import browser, have
-from selenium.webdriver import Keys
+from selene import browser, have, command
 
 
 def test_browser_submit(settingsofbrowser):
     browser.open_url('https://demoqa.com/automation-practice-form')
+    browser.element('#fixedban').perform(command.js.remove)
     browser.element('#firstName').type('Sergey')
     browser.element('#lastName').type('Pulatov')
     browser.element('#userEmail').type('biglol9898@gmaol.com')
